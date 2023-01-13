@@ -17,42 +17,57 @@ public class Sales {
 						{77,33,68,45,23},
 						{43,55,43,67,65}};
 		String[] sales = {"Jean","Tom","Tina"} ;
+		String[] productname = {"產品A","產品B","產品C","產品D","產品E"};
+		int []pprice = {12,16,10,14,15};
 		int[] totalsale = new int[3];
+		int[] products = new int [5];
 		
 		int price = 0;
 		int pricesum =0;
 		int topsales = 0;
+		int productnametop = 0;
+		
 		
 		
 		for(int i=0;i<3;i++) {
 			pricesum = 0;
 			for(int j=0;j<5;j++) {
-				switch (j){
-					case 0:
-						price = data[i][j]*12; break;
-					case 1:
-						price = data[i][j]*16; break;
-					case 2:
-						price = data[i][j]*10; break;
-					case 3:
-						price = data[i][j]*14; break;
-					case 4:
-						price = data[i][j]*15; break;
-				}	
-				pricesum+=price;
+				price = data[i][j]*pprice[j]; 
+				products[j] += price;
+				pricesum += price;
 			}//j=0;j<5;j++
 			System.out.println(sales[i] + "的銷售額: " + pricesum + " ");
 			totalsale[i] = pricesum;
 		}//i=0;i<3;i++
 
+		
+		
 		int j = totalsale[0];
 		for(int i = 0;i<3;i++) {
 			if(j < totalsale[i]) {
-				j = totalsale[i];
+				j = totalsale[i]; //比大小
 				topsales = i;
 			}//j<sum[i]
 		}//i = 0;i<3;i++
 		System.out.println("有最好業績（銷售總金額最多者）的銷售員: " + sales[topsales]);
+		
+		
+		
+		System.out.println("每一項產品的銷售總金額: ");
+		for(int i = 0;i<5;i++) {
+			System.out.println(productname[i]+" "+products[i]+"元 ");
+		}//i = 0;i<5;i++
+		
+		
+		int num = products[0];
+		for(int i = 0;i<5;i++) {
+			if(num < products[i]){
+				num = products[i]; //比大小
+				productnametop = i;
+			}//num < products[i+1]
+		}//i = 0;i<5;i++
+		System.out.println("銷售總金額最多的產品: "+productname[productnametop]);
+		
 	}
 
 }
