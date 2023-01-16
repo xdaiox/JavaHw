@@ -9,11 +9,10 @@ package com.xdaiox.hw2;
 public class PerfectNumber {
 
 	public static void main(String[] args) {
-		int num = 50;
-		
+
 		for(int j=1;j<=100;j++) {
-			for(int i=1;i<=num;i++) {
-				if(num%i == 0) {
+			for(int i=1;i<=j;i++) {
+				if(j%i == 0) {
 					System.out.println(i);
 				}//num%i == 0
 			}//i=1;i<=num;i++
