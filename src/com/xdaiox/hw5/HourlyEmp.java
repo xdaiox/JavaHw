@@ -4,7 +4,7 @@ public class HourlyEmp extends Employee {
 	 
 
 	public HourlyEmp() {
-		setEmpName("Mary");
+		setEmpName("Mary the 約聘員工");
 		setGender("f");
 		setDueDate("2020/01/01");
 		setTel("0972165599");
@@ -13,9 +13,7 @@ public class HourlyEmp extends Employee {
 		setSalarysH(250);
 		
 	}
-	public void printtotalsalary() {
-		System.out.print("臨時員工: ");
-		super.printtotalsalary();
-		System.out.println("當月薪資: " + 	super.totalSalaryF(0)+"\n");
+	public void printinfosalary() {
+		super.printinfo();
 	}
 }

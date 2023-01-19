@@ -1,11 +1,11 @@
 package com.xdaiox.hw5;
 
-public class Manager extends Employee{
-
+public class Manager extends SalariedEmp{
+	private int performanceBonus = 3000;
+	private int transportation = 3000;
+	
 	public Manager() {
-
-		
-		setEmpName("McLovin");
+		setEmpName("\nMcLovin the 主管");
 		setGender("m");
 		setDueDate("2009/06/09");
 		setTel("0969666999");
@@ -14,15 +14,13 @@ public class Manager extends Employee{
 		setSalarysH(250);
 	}
 	
+	public void printinfosalary() {
+		super.printinfosalary();
+		System.out.println("+ 績效獎金" + performanceBonus + "+ 交通津貼" + transportation);
+	}
+	
 	public void printtotalsalary() {
-		int performanceBonus = 3000;
-		int transportation = 3000;
-		int total = performanceBonus + transportation + getLunchAllowance(); 
-		
-		System.out.print("\n主管: ");
-		super.printtotalsalary();
-		System.out.println("當月薪資: " + 	super.totalSalaryF(total));
-
+		System.out.println("共: " + (getBasicSalary() + getLunchAllowance()+performanceBonus+transportation));
 	}
 	
 	

@@ -15,13 +15,10 @@ public abstract class Employee {
 	private int salarysH;
 	private int hours;
 	private int totalSalary;
-	private int lunchAllowance = 2400;
+	private int basicSalary = 40000;
 	
-	public int getLunchAllowance() {
-		return lunchAllowance;
-	}
-	public void setLunchAllowance(int lunchAllowance) {
-		this.lunchAllowance = lunchAllowance;
+	public int getBasicSalary() {
+		return basicSalary;
 	}
 	public int getTotalSalary() {
 		return totalSalary;
@@ -73,13 +70,13 @@ public abstract class Employee {
 	}
 
 	
-	public int totalSalaryF(int extra) {
-		totalSalary = hours * salarysH + extra;
-		return totalSalary;
-	}
+//	public int totalSalaryF(int extra) {
+//		totalSalary = hours * salarysH + extra;
+//		return totalSalary;
+//	}
 	
-	public void printtotalsalary () {
-		System.out.println(empName+"\nGender: "+gender+"\nDueDate: "+dueDate+"\nTel: "+tel+"\nEmail: "+email);
+	public void printinfo () {
+		System.out.print(empName+"\nGender: "+gender+"\nDueDate: "+dueDate+"\nTel: "+tel+"\nEmail: "+email+"\n基本薪資: "+ basicSalary);
 	}
 	
 }

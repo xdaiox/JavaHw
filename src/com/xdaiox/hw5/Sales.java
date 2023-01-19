@@ -1,11 +1,9 @@
 package com.xdaiox.hw5;
 
-public class Sales extends Employee{
-
+public class Sales extends SalariedEmp{
+	private int saleBonus = 3000;
 	public Sales() {
-
-		
-		setEmpName("Jerry");
+		setEmpName("\nJerry the 銷售員");
 		setGender("m");
 		setDueDate("2005/07/07");
 		setTel("0970000777");
@@ -14,14 +12,13 @@ public class Sales extends Employee{
 		setSalarysH(250);
 	}
 	
+	public void printinfosalary() {
+		super.printinfosalary();
+		System.out.println("+ 銷售獎金" + saleBonus);
+	}
+	
 	public void printtotalsalary() {
-		int saleBonus = 3000;
-		int total = saleBonus + getLunchAllowance(); 
-		
-		System.out.print("\n銷售員: ");
-		super.printtotalsalary();
-		System.out.println("當月薪資: " + 	super.totalSalaryF(total));
-
+		System.out.println("共: " + (getBasicSalary() + getLunchAllowance()+saleBonus));
 	}
 	
 	

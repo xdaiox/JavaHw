@@ -1,10 +1,11 @@
 package com.xdaiox.hw5;
 
 public class SalariedEmp extends Employee {
+	private int lunchAllowance = 2400;
 	
 	public SalariedEmp() {
 		
-		setEmpName("Jane");
+		setEmpName("\n\nJane the 員工");
 		setGender("f");
 		setDueDate("2019/05/16");
 		setTel("0972133333");
@@ -14,12 +15,16 @@ public class SalariedEmp extends Employee {
 		
 	}
 	
+	public int getLunchAllowance() {
+		return lunchAllowance;
+	}
+
+	public void printinfosalary() {
+		super.printinfo();
+		System.out.print("+ 午餐津貼" + lunchAllowance);
+	}
 	
 	public void printtotalsalary() {
-		int total = getLunchAllowance();
-		System.out.print("一般職員: ");
-		super.printtotalsalary();
-		System.out.println("當月薪資: " + 	super.totalSalaryF(total));
-
+		System.out.println("\n共: " + (getBasicSalary() + lunchAllowance));
 	}
 }
