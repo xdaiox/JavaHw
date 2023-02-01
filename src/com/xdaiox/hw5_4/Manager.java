@@ -1,0 +1,26 @@
+package com.xdaiox.hw5_4;
+
+public class Manager extends SalariedEmp{
+	private int performanceBonus = 3000;
+	private int transportation = 3000;
+	
+	public Manager(String empName,String gender,String dueDate, String tel,String email) {
+//		setEmpName("\nMcLovin the 主管");
+//		setGender("m");
+//		setDueDate("2009/06/09");
+//		setTel("0969666999");
+//		setEmail("Lovin69@gmail.com");
+		super(empName,gender,dueDate,tel,email);
+	}
+	
+	public void printinfosalary() {
+		super.printinfosalary();
+		System.out.println("+ 績效獎金" + performanceBonus + "+ 交通津貼" + transportation);
+	}
+	
+	public void printtotalsalary() {
+		System.out.println("共: " + (getBasicSalary() + getLunchAllowance()+performanceBonus+transportation));
+	}
+	
+	
+}

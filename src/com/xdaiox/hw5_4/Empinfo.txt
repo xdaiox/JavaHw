@@ -1,0 +1,7 @@
+"SE","Mary the 約聘員工","f","2020/01/01","0972165599","tmoswj@gmail.com"
+"Emp","Jane the 員工","f","2019/05/16","0972133333","Jame333@gmail.com"
+"M","McLovin the 主管","m","2009/06/09","0969666999","Lovin69@gmail.com"
+"S","Jerry the 銷售員","m","2005/07/07","0970000777","Jerry77@gmail.com"
+
+
+
