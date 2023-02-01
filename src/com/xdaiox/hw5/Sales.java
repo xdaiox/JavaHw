@@ -2,12 +2,13 @@ package com.xdaiox.hw5;
 
 public class Sales extends SalariedEmp{
 	private int saleBonus = 3000;
-	public Sales() {
-		setEmpName("\nJerry the 銷售員");
-		setGender("m");
-		setDueDate("2005/07/07");
-		setTel("0970000777");
-		setEmail("Jerry77@gmail.com");
+	public Sales(String empName,String gender,String dueDate, String tel,String email) {
+//		setEmpName("\nJerry the 銷售員");
+//		setGender("m");
+//		setDueDate("2005/07/07");
+//		setTel("0970000777");
+//		setEmail("Jerry77@gmail.com");
+		super(empName,gender,dueDate,tel,email);
 	}
 	
 	public void printinfosalary() {

@@ -10,8 +10,9 @@ public class HourlyEmp extends Employee {
 //		setDueDate("2020/01/01");
 //		setTel("0972165599");
 //		setEmail("tmoswj@gmail.com");
+		super(empName,gender,dueDate,tel,email);
 		hours=176;
-		salarysH=250;
+		salarysH=180;
 	}
 	public void printinfosalary() {
 		super.printinfo();

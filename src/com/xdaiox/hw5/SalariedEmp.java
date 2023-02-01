@@ -14,13 +14,14 @@ public class SalariedEmp extends Employee {
 	}
 	
 	
-	public SalariedEmp() {
+	public SalariedEmp(String empName,String gender,String dueDate, String tel,String email) {
 		
-		setEmpName("\n\nJane the 員工");
-		setGender("f");
-		setDueDate("2019/05/16");
-		setTel("0972133333");
-		setEmail("Jame333@gmail.com");
+//		setEmpName("\n\nJane the 員工");
+//		setGender("f");
+//		setDueDate("2019/05/16");
+//		setTel("0972133333");
+//		setEmail("Jame333@gmail.com");
+		super(empName,gender,dueDate,tel,email);
 		
 	}
 	
