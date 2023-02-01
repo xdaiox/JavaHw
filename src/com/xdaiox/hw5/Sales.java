@@ -8,8 +8,6 @@ public class Sales extends SalariedEmp{
 		setDueDate("2005/07/07");
 		setTel("0970000777");
 		setEmail("Jerry77@gmail.com");
-		setHours(176);
-		setSalarysH(250);
 	}
 	
 	public void printinfosalary() {

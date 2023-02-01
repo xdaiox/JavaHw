@@ -58,6 +58,7 @@ public class Rain {
 				Scanner iy = new Scanner(System.in);
 				System.out.print("請輸入第幾年 1~5數字:");
 				chknum = iy.next();
+				iy.close();
 				switch (chknum) {
 					case "1": case "2": case "3": case "4": case "5": {
 						i=Integer.parseInt(chknum);;
@@ -88,7 +89,7 @@ public class Rain {
 				Scanner is = new Scanner(System.in);
 				System.out.print("請輸入第幾季 1~4數字:");
 				chknum = is.next();
-				
+				is.close();
 				switch (chknum) {
 					case "1": case "2": case "3": case "4": {
 						j=Integer.parseInt(chknum);;
@@ -116,6 +117,7 @@ public class Rain {
 				Scanner im = new Scanner(System.in);
 				System.out.print("請輸入第幾個月 1~12數字:");
 				chknum = im.next();
+				im.close();
 				switch (chknum) {
 					case "1": case "2": case "3": case "4":
 					case "5": case "6": case "7": case "8":

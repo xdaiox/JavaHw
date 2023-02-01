@@ -12,20 +12,17 @@ public abstract class Employee {
 	private String dueDate;
 	private String tel;
 	private String email;
-	private int salarysH;
-	private int hours;
-	private int totalSalary;
-	private int basicSalary = 40000;
+
+	public Employee(String empName,String gender,String dueDate, String tel,String email) {
+		this.empName = empName;
+		this.gender = gender;
+		this.dueDate = dueDate;
+		this.tel = tel;
+		this.email = email;
+	}
+	public Employee() {}
 	
-	public int getBasicSalary() {
-		return basicSalary;
-	}
-	public int getTotalSalary() {
-		return totalSalary;
-	}
-	public void setTotalSalary(int totalSalary) {
-		this.totalSalary = totalSalary;
-	}
+	
 	public String getEmpName() {
 		return empName;
 	}
@@ -56,18 +53,6 @@ public abstract class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getSalarysH() {
-		return salarysH;
-	}
-	public void setSalarysH(int salarysH) {
-		this.salarysH = salarysH;
-	}
-	public int getHours() {
-		return hours;
-	}
-	public void setHours(int hours) {
-		this.hours = hours;
-	}
 
 	
 //	public int totalSalaryF(int extra) {
@@ -76,7 +61,7 @@ public abstract class Employee {
 //	}
 	
 	public void printinfo () {
-		System.out.print(empName+"\nGender: "+gender+"\nDueDate: "+dueDate+"\nTel: "+tel+"\nEmail: "+email+"\n基本薪資: "+ basicSalary);
+		System.out.print(empName+"\nGender: "+gender+"\nDueDate: "+dueDate+"\nTel: "+tel+"\nEmail: "+email);
 	}
 	
 }

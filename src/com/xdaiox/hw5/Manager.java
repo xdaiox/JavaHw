@@ -10,8 +10,6 @@ public class Manager extends SalariedEmp{
 		setDueDate("2009/06/09");
 		setTel("0969666999");
 		setEmail("Lovin69@gmail.com");
-		setHours(176);
-		setSalarysH(250);
 	}
 	
 	public void printinfosalary() {
